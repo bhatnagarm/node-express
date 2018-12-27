@@ -6,12 +6,17 @@ const bodyParser = require('body-parser');
 const hostname='localhost';
 const port=3000;
 const dishRouter = require('./router/dishRouter');
+const promoRouter = require('./router/promoRouter.js');
+const leaderRouter = require('./router/leaderRouter.js');
+
 const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname+ '/public'))
 app.use('/dishes', dishRouter);
+app.use('/promotions', promoRouter);
+app.use('/leaders', leaderRouter);
 
 
 app.use(express.static(__dirname+ '/public'))
