@@ -6,8 +6,8 @@ const bodyParser = require('body-parser');
 const hostname='localhost';
 const port=3000;
 const dishRouter = require('./router/dishRouter');
-const promoRouter = require('./router/promoRouter.js');
-const leaderRouter = require('./router/leaderRouter.js');
+const promoRouter = require('./router/promoRouter');
+const leaderRouter = require('./router/leaderRouter');
 
 const app = express();
 app.use(morgan('dev'));
